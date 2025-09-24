@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./css/index.css">
+    </link>
+    <script src="./script/index.js"></script>
+
+
+</head>
+
+<body style="background-color: rgb(182, 182, 184);">
+
+
+    <div class="container-fluid "
+        style="display: flex; justify-content: center; align-items: center; background-color: rgb(182, 182, 184);">
+
+
+
+        <div class="container px-3 my-5 "
+            style="background-color: white; width: 900px; height: 550px;border-radius: 15px; box-shadow: 7px 7px 10px grey;">
+
+            <div class="row px-5 d-flex main">
+
+                <div class="col-md-7 col-sm-12">
+
+                    <div class="container-fluid stepTwo" id="otpVerification" style="display: none;">
+
+                        <div class="container-fluid my-5 mx-3"
+                            style="display: flex; justify-content: center; align-items: center; ">
+
+                            <div class="card p-5 "
+                                style=" border-radius: 15px; margin-top: 60px; background-color: rgb(220, 220, 241);">
+                                <h3 class="my-3 text-center">Enter Your <abbr title="One Time Password">OTP</abbr></h3>
+                                <input type="text" class="form-control" placeholder="Enter your OTP here" id="otpInput">
+                                <div class="d-flex my-3" style="justify-content: space-around;">
+                                    <button class="btn btn-primary " id="generateBtn">Generate</button>
+                                    <button class="btn btn-primary " id="sumbitBtn">Submit</button>
+                                </div>
+                                <p class="text-center my-2 h5 text-dark " id="otpPara"></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <form id="signupValidation" action="" novalidate>
+
+                        <div class="row">
+
+                            <div class="col h2 mt-5 text-center">
+                                Sign up
+                            </div>
+                        </div>
+
+                        <div class="row gap-1 my-2">
+                            <div class="col d-flex logo">
+                                <span class="mx-2"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                        fill="currentColor" class="bi bi-person-fill " viewBox="0 0 16 16">
+                                        <path
+                                            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                    </svg></span>
+                                <input type="text" class="form-control" placeholder="Your Name" width="450px" id="name">
+                            </div>
+                            <div class="error text-center" id="nameError"></div>
+                        </div>
+
+                        <div class="row gap-1 my-2">
+                            <div class="col d-flex logo">
+                                <span class="mx-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                        class="bi bi-envelope-fill " viewBox="0 0 16 16">
+                                        <path
+                                            d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+                                    </svg>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Your Email" id="email">
+                            </div>
+                            <div class="error  text-center" id="emailError"></div>
+                        </div>
+
+
+                        <div class="row gap-1 my-2">
+                            <div class="col d-flex logo">
+                                <span class="mx-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                        class="bi bi-lock-fill " viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M8 0a4 4 0 0 1 4 4v2.05a2.5 2.5 0 0 1 2 2.45v5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5v-5a2.5 2.5 0 0 1 2-2.45V4a4 4 0 0 1 4-4m0 1a3 3 0 0 0-3 3v2h6V4a3 3 0 0 0-3-3" />
+                                    </svg>
+                                </span>
+                                <input type="password" class="form-control" placeholder="Password" id="password">
+                            </div>
+                            <div class="error  text-center" id="passwordError"></div>
+                        </div>
+
+                        <div class="row gap-1 my-2">
+                            <div class="col d-flex logo">
+                                <span class="mx-2" style="cursor: pointer; " id="eye">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                        class="bi bi-eye-fill " viewBox="0 0 16 16">
+                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                                        <path
+                                            d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7" />
+                                    </svg>
+                                </span>
+
+                                <input type="password" class="form-control" placeholder="Confirm Your Password"
+                                    id="confirmPassword">
+                            </div>
+                            <div class="error text-center my-2" id="confirmPasswordError"></div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col text-center">
+                                <input type="checkbox" id="agreement"> I agree all statements in <a href="#"
+                                    style="text-decoration: none;"> Terms of service</a>
+                            </div>
+                            <div class="error text-center p-2" id="agreementError"></div>
+
+                        </div>
+                        <div style="display: flex; align-items: center; justify-content: center; " class="my-4">
+                            <button class="btn btn-primary" type="submit" id="btn">REGISTER</button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <div class="col-md-5   my-5">
+                    <img class="img-fluid my-5" src="./image/secure.png">
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

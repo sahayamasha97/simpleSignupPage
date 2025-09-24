@@ -1,0 +1,15 @@
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+@media (max-width: 5300px) {
+
+    .logo {
+        margin-left: -20px;
+
+    }
+
+
+
+}
